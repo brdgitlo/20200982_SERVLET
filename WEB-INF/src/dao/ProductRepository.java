@@ -7,26 +7,40 @@ public class ProductRepository {
 	private ArrayList<Product> listOfProducts = new ArrayList<Product>(); // ArrayList를 Product로 캐스팅
 
 	public ProductRepository() {
-		Product ALPA = new Product("P1234", "ALPA1", 20000);
+		Product ALPA = new Product("P1234", "ALPA", 20000);
 		ALPA.setDescription("size 250-300, Non-slip");
 		ALPA.setCategory("SOCKS");
 		ALPA.setManufacturer("PB");
 		ALPA.setUnitsInStock(1000);
 		ALPA.setCondition("New");
         
-        Product BETA = new Product("P1235", "BETA1", 25000);
+        Product BETA = new Product("P1235", "BETA", 25000);
 		BETA.setDescription("size 250-300, Non-slip");
 		BETA.setCategory("SOCKS");
 	    BETA.setManufacturer("PB");
 		BETA.setUnitsInStock(1000);
 		BETA.setCondition("New");
 
-		Product PRO = new Product("P1236", "PRO1", 30000);
-        PRO.setDescription("size 250-300, Non-slip");
+		Product PRO = new Product("P1236", "PRO", 30000);
+        PRO.setDescription("size 250-300, Non-slip, Basic");
 		PRO.setCategory("SOCKS");
 	    PRO.setManufacturer("PB");
 		PRO.setUnitsInStock(1000);
 		PRO.setCondition("New");
+        
+        Product PRO1 = new Product("P12361", "PRO1", 30000);
+        PRO1.setDescription("size 250-300, Non-slip, Speed");
+		PRO1.setCategory("SOCKS");
+	    PRO1.setManufacturer("PB");
+		PRO1.setUnitsInStock(1000);
+		PRO1.setCondition("New");
+        
+        Product PRO2 = new Product("P12362", "PRO2", 30000);
+        PRO2.setDescription("size 250-300, Non-slip, change direction");
+		PRO2.setCategory("SOCKS");
+	    PRO2.setManufacturer("PB");
+		PRO2.setUnitsInStock(1000);
+		PRO2.setCondition("New");
         
         Product ELITE = new Product("P1237", "ELITE", 40000);
         ELITE.setDescription("size 250-300, Non-slip");
@@ -41,6 +55,8 @@ public class ProductRepository {
 		listOfProducts.add(ALPA);
 		listOfProducts.add(BETA);
 		listOfProducts.add(PRO);
+        listOfProducts.add(PRO1);
+        listOfProducts.add(PRO2);
         listOfProducts.add(ELITE);
 		// listOfProducts.add(상품명);
 	}
@@ -48,4 +64,17 @@ public class ProductRepository {
 	public ArrayList<Product> getAllProducts() {
 		return listOfProducts;
 	}
+
+public Product getProductById(String productId) {
+		Product productById = null;
+
+		for (int i = 0; i < listOfProducts.size(); i++) {
+			Product product = listOfProducts.get(i);
+			if (product != null && product.getProductId() != null && product.getProductId().equals(productId)) {
+				productById = product;
+				break;
+			}
+		}
+		return productById;
+    }
 }
