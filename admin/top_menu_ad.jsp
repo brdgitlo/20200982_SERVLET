@@ -2,12 +2,13 @@
 <nav class="navbar navbar-expand navbar-dark bg-dark">
          <div class="container">
             <div class="navbar-header">
-                <img src="image\pbs.gif" class="img-fluid" alt="main_image">
                 <a class="navbar-brand" href="./index.jsp">메뉴바 : 홈페이지</a>
-                <a class="navbar-brand" href="./index.jsp">로그인</a>
-                <a class="navbar-brand" href="./index.jsp">회원가입</a>
-                <a class="navbar-brand" href="./index.jsp">고객센터</a>
-                <a class="navbar-brand" href="admin/index_ad.jsp">관리자모드</a>
+            <a class="navbar-brand" href="./index.jsp">회원 보기/추가/수정/삭제</a>
+            <a class="navbar-brand" href="index_ad.jsp">상품 보기</a>
+            <a class="navbar-brand" href="product_add.jsp">등록</a>
+            <a class="navbar-brand" href="index_ad.jsp">수정/삭제</a>
+            <a class="navbar-brand" href="../index.jsp">일반모드</a>
+                
                 <div class="dropdown">
   		<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     		SHOP

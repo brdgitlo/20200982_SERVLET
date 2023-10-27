@@ -1,8 +1,6 @@
 <%@ page contentType="text/html; charset=utf-8"%>
-<%@ page import="java.util.ArrayList"%>
-<%@ page import="dto.Product"%>
-
-<jsp:useBean id="productDAO" class="dao.ProductRepository" scope="session" />
+<%@ page import="dto.Product"%> <!-- 패키지 연동 -->
+<%@ page import="dao.ProductRepository"%>
 
 <%! String greeting = "현재 페이지는 축구양말 상품 목록입니다.";
 	String tagline = "하단 페이지 : 확인";%>
@@ -14,11 +12,11 @@
 				<%=greeting%>
             </h3>
 		</div>
-	</div>
+	</div>      
 <%
-	ArrayList<Product> listOfProducts = productDAO.getAllProducts(); // 리스트에 상품 전체 정보를 얻어온다.
-%> 	
-        
+	ProductRepository dao = ProductRepository.getInstance();
+	ArrayList<Product> listOfProducts = dao.getAllProducts();
+%>
 <div class="container">
 		<div class="row" align="center">
 			<%
@@ -27,7 +25,7 @@
 			%>
 			<div class="col-md-4">
                  <div class="card bg-dark text-white">
-                        <img src="image/product/<%=product.getFilename()%>.jpg" class="card-img" alt="...">
+                        <img src="../image/product/<%=product.getFilename()%>.jpg" class="card-img" alt="...">
                         <div class="card-img-overlay">
                         <h5 class="card-title">트루삭스 이미지 샘플</h5>
                         <p class="card-text">출처 : 구글 검색</p>
@@ -36,7 +34,7 @@
 				<h3><%=product.getPname()%></h3>
 				<p><%=product.getDescription()%>
 				<p><%=product.getUnitPrice()%>원
-                <p><a href="product_detail.jsp?id=<%=product.getProductId()%>" class="btn btn-secondary" role="button"> 상품 상세 정보 &raquo;</a>
+                <p><a href="product_detail_ad.jsp?id=<%=product.getProductId()%>" class="btn btn-secondary" role="button"> 상품 상세 정보 &raquo;</a>
 			</div>
 			<%
 				} //반복문 끝
