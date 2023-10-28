@@ -1,6 +1,7 @@
 <%@ page contentType="text/html; charset=utf-8"%>
 <%@ page import="dto.Product"%> <!-- 패키지 연동 -->
 <%@ page import="dao.ProductRepository"%>
+<%@ page import="java.util.ArrayList"%>
 
 <%! String greeting = "현재 페이지는 축구양말 상품 목록입니다.";
 	String tagline = "하단 페이지 : 확인";%>
