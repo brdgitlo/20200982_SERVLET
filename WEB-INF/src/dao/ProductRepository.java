@@ -13,7 +13,7 @@ public class ProductRepository {
 
 	public ProductRepository() {
 		Product ALPA = new Product("P1234", "ALPA", 20000);
-        ALPA.setFilename("P1234.jpg");
+        ALPA.setFilename("P1234");
 		ALPA.setDescription("size 250-300, Non-slip");
 		ALPA.setCategory("SOCKS");
 		ALPA.setManufacturer("PB");
@@ -21,7 +21,7 @@ public class ProductRepository {
 		ALPA.setCondition("New");
         
         Product BETA = new Product("P1235", "BETA", 25000);
-        BETA.setFilename("P1235.jpg");
+        BETA.setFilename("P1235");
 		BETA.setDescription("size 250-300, Non-slip");
 		BETA.setCategory("SOCKS");
 	    BETA.setManufacturer("PB");
@@ -29,7 +29,7 @@ public class ProductRepository {
 		BETA.setCondition("New");
 
 		Product PRO = new Product("P1236", "PRO", 30000);
-        PRO.setFilename("P1236.jpg");
+        PRO.setFilename("P1236");
         PRO.setDescription("size 250-300, Non-slip, Basic");
 		PRO.setCategory("SOCKS");
 	    PRO.setManufacturer("PB");
@@ -37,7 +37,7 @@ public class ProductRepository {
 		PRO.setCondition("New");
         
         Product PRO1 = new Product("P12361", "PRO1", 30000);
-        PRO1.setFilename("P12361.jpg");
+        PRO1.setFilename("P12361");
         PRO1.setDescription("size 250-300, Non-slip, Speed");
 		PRO1.setCategory("SOCKS");
 	    PRO1.setManufacturer("PB");
@@ -45,7 +45,7 @@ public class ProductRepository {
 		PRO1.setCondition("New");
         
         Product PRO2 = new Product("P12362", "PRO2", 30000);
-        PRO2.setFilename("P12362.jpg");
+        PRO2.setFilename("P12362");
         PRO2.setDescription("size 250-300, Non-slip, change direction");
 		PRO2.setCategory("SOCKS");
 	    PRO2.setManufacturer("PB");
@@ -53,7 +53,7 @@ public class ProductRepository {
 		PRO2.setCondition("New");
         
         Product ELITE = new Product("P1237", "ELITE", 40000);
-        ELITE.setFilename("P1237.jpg");
+        ELITE.setFilename("P1237");
         ELITE.setDescription("size 250-300, Non-slip");
 		ELITE.setCategory("SOCKS");
 	    ELITE.setManufacturer("PB");

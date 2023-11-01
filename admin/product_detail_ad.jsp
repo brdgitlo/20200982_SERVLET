@@ -37,7 +37,7 @@
 				<p><b>재고 수</b> : <%=product.getUnitsInStock()%>
 				<h4><%=product.getUnitPrice()%>원</h4>
                 <div class="card bg-dark text-white">
-                    <img src="image/product/<%=product.getFilename()%>.jpg" class="card-img" alt="...">
+                    <img src="image/product/<%=product.getFilename()%>" class="card-img" alt="...">
                     <div class="card-img-overlay">
                     <h5 class="card-title">상품 이미지 원본</h5>
                     <p class="card-text">출처 : 구글 검색</p>
@@ -48,6 +48,24 @@
 		</div>
 		<hr>
 	</div>
-    <%@ include file="footer.jsp" %>
+    <%@ page contentType = "text/html; charset=utf-8"%>
+<footer class="container">
+		<p>&copy; 웹마켓 최하단 상태바</p>
+                <%
+	Date day = new java.util.Date();
+	String am_pm;
+	int hour = day.getHours();
+	int minute = day.getMinutes();
+	int second = day.getSeconds();
+	if (hour / 12 == 0) {
+		am_pm = "AM";
+	} else {
+		am_pm = "PM";
+		hour = hour - 12;
+	}
+	String CT = hour + ":" + minute + ":" + second + " " + am_pm;
+	out.println("현재 접속 시각: " + CT + "\n");
+%>
+	</footer>
 </body>
 </html>
