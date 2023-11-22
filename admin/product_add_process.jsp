@@ -42,7 +42,7 @@
 	else
 		stock = Long.valueOf(unitsInStock);
 
-    Enumeration files = multi.getFileNames();
+   	Enumeration files = multi.getFileNames();
 	String fname = (String) files.nextElement();
 	String fileName = multi.getFilesystemName(fname);
 
@@ -62,7 +62,6 @@
  		pstmt.close();
  	if (conn != null)
 		conn.close();
-
-
-	response.sendRedirect("index_ad.jsp");
+	
+ 	response.sendRedirect("index_ad.jsp");
 %>
