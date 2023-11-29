@@ -5,7 +5,7 @@
 <%@ page import="com.oreilly.servlet.multipart.*"%>
 <%@ page import="java.util.Enumeration" %>
 <%@ page import="java.sql.*"%>
-<%@ include file="..db/db_conn.jsp" %>
+<%@ include file="../db/db_conn.jsp" %>
 
 <%
 	request.setCharacterEncoding("UTF-8");
